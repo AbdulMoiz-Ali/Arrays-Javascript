@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARRAYS</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="blue"></div>
+    <div class="heading">
+      <div class="space"></div>
+      <div class="head">
+        <h1>
+          ARRAYS <br />
+          Arrays: Adding and removing elements
+        </h1>
+      </div>
+      <div class="space"></div>
+    </div>
+    <div class="blue-buttom">
+      <div class="para">
+        Assinment # 13-15 <br />
+        JAVASCRIPT
+      </div>
+    </div>
+    <div class="chap">
+      <h1><br />C h a p t e r s</h1>
+      <br />
+    </div>
+
+    <div class="moiz">
+      <h1>-: ARRAYS :-</h1>
+      <p class="ali">
+        <br />
+        Let's assign some string values to some variables. <br />
+        var city0 = "Atlanta"; <br />
+        var city1 = "Baltimore"; <br />
+        var city2 = "Chicago"; <br />
+        var city3 = "Denver"; <br />
+        var city4 = "Los Angeles"; <br />
+        var city5 = "Seattle"; <br />
+        The variable names are all the same, except they end in different
+        numbers. I could have <br />
+        named the variables buffy, the, vampireSlayer, and so on if I'd wanted
+        to, but I chose to <br />
+        name them this way because of where this discussion is going. <br />
+        Now, having made these assignments, if I code... <br />
+        alert("Welcome to " + city3); <br />
+        ...an alert displays saying, "Welcome to Denver". <br />
+        I'm going to show you another type of variable, one that will come in
+        handy for many <br />
+        tasks that you'll learn about in later chapters. I'm talking about a
+        type of variable called an <br />
+        array. Whereas an ordinary variable has a single value assigned to
+        it—for example, 9 or <br />
+        "Paris"—an array is a variable that can have multiple values assigned to
+        it. You define an <br />
+        array this way: <br />
+        var cities = ["Atlanta", "Baltimore", "Chicago", "Denver", "Los
+        Angeles", "Seattle"]; <br />
+        In the example at the beginning of this chapter, I ended each variable
+        name with a number. <br />
+        city0 was "Atlanta", city1 was "Baltimore", and so on. The array I just
+        defined is similar, <br />
+        but in the case of an array defined the way I just defined one,
+        JavaScript numbers the different <br />
+        values, or elements, automatically. (You can control the numbering
+        yourself by defining <br />
+        elements individually. See below.) And you refer to each element by
+        writing the array name <br />
+        —cities in this case—followed by a number enclosed in square brackets.
+        cities[0] is <br />
+        "Atlanta", cities[1] is "Baltimore", and so on. <br />
+        Because JavaScript automatically numbers array elements, you have no say
+        in the <br />
+        numbering. The first element in the list always has an index of 0, the
+        second element an index <br />
+        of 1, and so on. <br />
+        This is the alert I coded above, but now specifying an array element
+        instead of an <br />
+        ordinary variable. <br />
+        alert("Welcome to " + cities[3]); <br />
+        An array can be assigned any type of value that you can assign to
+        ordinary variables. You <br />
+        can even mix the different types in the same array (not that you would
+        ordinarily want to). <br />
+        var mixedArray = [1, "Bob", "Now is", true]; <br />
+        In the example above, mixedArray[0] has a numerical value of 1,
+        mixedArray[1] has a <br />
+        string value of "Bob", and so on. <br />
+        Things to keep in mind: <br />
+        The first item always has an index of 0, not 1. This means that if the
+        last item in the list <br />
+        has an index of 9, there are 10 items in the list. <br />
+        The same naming rules you learned for ordinary variables apply. Only
+        letters, numbers, $ <br />
+        and _ are legal. The first character can't be a number. No spaces.
+        <br />
+        Coders often prefer to make array names plural—cities instead of city,
+        for example— <br />
+        since an array is a list of things. <br />
+        Like an ordinary variable, you declare an array only once. If you assign
+        new values to an <br />
+        array that has already been declared, you drop the var. <br />
+      </p>
+    </div>
+
+    <div class="moiz">
+      <h1>-: Arrays: Adding and removing elements :-</h1>
+      <p class="ali">
+        As you learned in earlier chapters, you can declare an empty variable,
+        one that doesn't <br />
+        have a value. Then you can assign it a value whenever you like. And you
+        can change its value <br />
+        at will. You can do all these things with an array, as well. <br />
+        This is how you declare an empty array. <br />
+        var pets = []; <br />
+        Assume that the array pets has already been declared. This is how you
+        assign values to <br />
+        it. <br />
+        1 pets[0] = "dog"; <br />
+        2 pets[1] = "cat"; <br />
+        3 pets[2] = "bird"; <br />
+        In the example above, I defined the first three elements of the array,
+        in order. But you can <br />
+        legally leave gaps in an array if you choose to (not that you normally
+        would). For example, <br />
+        suppose you start with the same empty array and code these lines. <br />
+        1 pets[3] = "lizard"; <br />
+        2 pets[6] = "snake"; <br />
+        Now, if you refer to pets[3], you'll get "lizard". If you refer to
+        pets[6], you'll get <br />
+        "snake". But if you refer to pets[0] through pets[2] or pets[4] or
+        pets[5], you'll get <br />
+        undefined. <br />
+        You can assign additional values to an array that already has values.
+        Assume that the first <br />
+        three elements of the array pets are "dog", "cat", and "bird". Then you
+        write this code. <br />
+        1 pets[3] = "lizard"; <br />
+        2 pets[4] = "fish"; <br />
+        3 pets[5] = "gerbil"; <br />
+        4 pets[6] = "snake"; <br />
+        Now the array has 7 elements: "dog", "cat", "bird", "lizard", "fish",
+        "gerbil", and "snake". <br />
+        If you assign a new value to an array element that already has one, the
+        old value is <br />
+        replaced by the new one. <br />
+        Using the keyword, pop, you can remove the last element of an array.
+        <br />
+        Suppose you have an array, pets, whose elements are "dog", "cat", and
+        "bird". The <br />
+        following code deletes the last element, "bird", leaving a two-element
+        array. <br />
+        pets.pop(); <br />
+        Using the keyword, push, you can add one or more elements to the end of
+        an array. <br />
+        Suppose you have that same array consisting of "dog", "cat", and "bird".
+        The following <br />
+        code adds two new elements to the end of the array. <br />
+        pets.push("fish", "ferret"); <br />
+        <br />
+      </p>
+    </div>
+    <div class="moiz">
+      <h1>-: Assignment :-</h1>
+      <p class="ali">
+        <object
+          data="./chapters14-16.pdf"
+          type="application/pdf"
+          width="100%"
+          height="500px"
+        >
+          <p>
+            Unable to display PDF file.
+            <a href="./chapters14-16.pdf">Download</a>
+            instead.
+          </p>
+        </object>
+      </p>
+    </div>
+    <div class="chap">
+      <h1><br />Perform The Assignment</h1>
+      <br />
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
